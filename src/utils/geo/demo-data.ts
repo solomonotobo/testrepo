@@ -1,0 +1,62 @@
+import type { Bounds, ParcelFeature } from './types';
+
+export const demoParcels: ParcelFeature[] = [
+  {
+    id: 'lot-1000477501',
+    bbl: '1000477501',
+    borough: 'Manhattan',
+    block: '47',
+    lot: '7501',
+    name: 'Battery Maritime Building',
+    address: '10 South Street',
+    zoningDistrict: 'C6-4',
+    landUse: 'Transportation / civic',
+    far: '10.0',
+    overlays: ['Lower Manhattan Special Purpose District', 'Waterfront Access Plan'],
+    projects: ['East River resiliency coordination'],
+    center: [-74.0121, 40.7019],
+    bounds: { west: -74.0143, south: 40.7001, east: -74.0085, north: 40.7041 },
+    svgPoints: '305,520 430,492 458,600 322,632',
+    summary: 'Historic ferry terminal and civic waterfront parcel with high-density commercial zoning.',
+  },
+  {
+    id: 'lot-3011890001',
+    bbl: '3011890001',
+    borough: 'Brooklyn',
+    block: '1189',
+    lot: '1',
+    name: 'Prospect Heights Mixed-Use Corridor',
+    address: '625 Atlantic Avenue',
+    zoningDistrict: 'M1-4/R7A',
+    landUse: 'Mixed residential & commercial',
+    far: '4.0 residential / 2.0 commercial',
+    overlays: ['Special Enhanced Commercial District'],
+    projects: ['Atlantic Avenue plan study'],
+    center: [-73.9702, 40.6842],
+    bounds: { west: -73.9748, south: 40.6813, east: -73.9664, north: 40.6872 },
+    svgPoints: '500,392 662,365 690,482 530,522',
+    summary: 'A transit-served corridor parcel used to demonstrate mixed-use zoning and active planning layers.',
+  },
+  {
+    id: 'lot-4023120040',
+    bbl: '4023120040',
+    borough: 'Queens',
+    block: '2312',
+    lot: '40',
+    name: 'Long Island City Production Block',
+    address: '43-10 23rd Street',
+    zoningDistrict: 'M1-5/R9',
+    landUse: 'Light industrial / office',
+    far: '5.0 manufacturing / 8.0 residential equivalent',
+    overlays: ['Long Island City Special District'],
+    projects: ['Industrial business zone investments'],
+    center: [-73.9408, 40.7471],
+    bounds: { west: -73.9457, south: 40.7441, east: -73.9362, north: 40.7501 },
+    svgPoints: '650,205 822,245 788,350 620,312',
+    summary: 'Industrial and office district near the waterfront with strong transit access.',
+  },
+];
+
+export function intersectsBounds(featureBounds: Bounds, queryBounds: Bounds) {
+  return featureBounds.west <= queryBounds.east && featureBounds.east >= queryBounds.west && featureBounds.south <= queryBounds.north && featureBounds.north >= queryBounds.south;
+}

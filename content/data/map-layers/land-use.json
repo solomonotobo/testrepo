@@ -1,0 +1,21 @@
+{
+  "id": "land-use",
+  "label": "Land use",
+  "description": "Parcel-level land-use layer presentation metadata for residential, mixed-use, civic, and industrial categories.",
+  "sourceId": "land-use-vector-source",
+  "sourceLayer": "land_use",
+  "type": "fill",
+  "paint": {
+    "fill-color": ["match", ["get", "land_use"], "residential", "#86efac", "mixed", "#5eead4", "civic", "#93c5fd", "industrial", "#fca5a5", "#e5e7eb"],
+    "fill-opacity": 0.5
+  },
+  "layout": {},
+  "legend": [
+    { "label": "Residential", "color": "#86efac" },
+    { "label": "Mixed use", "color": "#5eead4" },
+    { "label": "Civic", "color": "#93c5fd" },
+    { "label": "Industrial", "color": "#fca5a5" }
+  ],
+  "defaultVisible": true,
+  "attribution": "Demo metadata; replace with official planning data attribution."
+}

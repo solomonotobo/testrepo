@@ -1,0 +1,20 @@
+{
+  "id": "planning-projects",
+  "label": "Planning projects",
+  "description": "Point and polygon metadata for planning initiatives, rezonings, and public-realm projects.",
+  "sourceId": "planning-projects-source",
+  "sourceLayer": "planning_projects",
+  "type": "circle",
+  "paint": {
+    "circle-color": "#f97316",
+    "circle-radius": 7,
+    "circle-stroke-color": "#ffffff",
+    "circle-stroke-width": 2
+  },
+  "layout": {},
+  "legend": [
+    { "label": "Planning project", "color": "#f97316" }
+  ],
+  "defaultVisible": true,
+  "attribution": "Demo metadata; replace with official planning data attribution."
+}

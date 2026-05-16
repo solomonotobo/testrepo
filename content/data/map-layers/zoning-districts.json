@@ -1,0 +1,20 @@
+{
+  "id": "zoning-districts",
+  "label": "Zoning districts",
+  "description": "Generalized zoning district overlay metadata. Replace the source URL with an authoritative vector tile service in production.",
+  "sourceId": "zoning-vector-source",
+  "sourceLayer": "zoning_districts",
+  "type": "fill",
+  "paint": {
+    "fill-color": ["match", ["get", "district_type"], "residential", "#7dd3fc", "commercial", "#fbbf24", "manufacturing", "#c4b5fd", "#d1d5db"],
+    "fill-opacity": 0.55
+  },
+  "layout": {},
+  "legend": [
+    { "label": "Residential", "color": "#7dd3fc" },
+    { "label": "Commercial", "color": "#fbbf24" },
+    { "label": "Manufacturing", "color": "#c4b5fd" }
+  ],
+  "defaultVisible": true,
+  "attribution": "Demo metadata; replace with official planning data attribution."
+}
