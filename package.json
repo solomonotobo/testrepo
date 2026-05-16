@@ -1,0 +1,12 @@
+{
+  "name": "zola-inspired-planning-map",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A lightweight ZoLa-inspired zoning and land-use map prototype.",
+  "scripts": {
+    "start": "node scripts/server.js",
+    "build": "node scripts/build.js",
+    "test": "node --test"
+  }
+}
